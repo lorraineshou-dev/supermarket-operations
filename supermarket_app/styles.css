@@ -1,0 +1,328 @@
+/* A restrained mint palette with readable text and consistent rounded controls. */
+.block-container {
+    max-width: 1200px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+.stApp { background: #f7faf9; color: #253c39; }
+[data-testid="stHeader"] { background: #f7faf9; }
+h1, h2, h3 { color: #253c39; letter-spacing: -0.025em; }
+/* Target caption text directly to override Streamlit's muted child styles. */
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p {
+    color: #425b53;
+    font-size: 0.9rem;
+    opacity: 1;
+}
+[data-testid="stTextInput"] input::placeholder {
+    color: #52665f;
+    opacity: 1;
+}
+
+/* Style action buttons without changing number-input steppers or table tools. */
+[data-testid="stButton"] button,
+[data-testid="stDownloadButton"] button,
+[data-testid="stFormSubmitButton"] button {
+    min-height: 44px;
+    padding: 0.65rem 1.2rem;
+    border-radius: 11px;
+    border: 1px solid #cbded7;
+    background: #edf5f1;
+    color: #2e6055;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(32, 67, 57, 0.04);
+    transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+[data-testid="stButton"] button p,
+[data-testid="stDownloadButton"] button p,
+[data-testid="stFormSubmitButton"] button p { font-weight: 600; }
+[data-testid="stButton"] button:hover:not(:disabled),
+[data-testid="stDownloadButton"] button:hover:not(:disabled),
+[data-testid="stFormSubmitButton"] button:hover:not(:disabled) {
+    background: #e0eee7;
+    color: #214f45;
+    border-color: #7ea99a;
+    box-shadow: 0 3px 8px rgba(32, 67, 57, 0.08);
+}
+[data-testid="stButton"] button[kind^="primary"],
+[data-testid="stFormSubmitButton"] button[kind^="primary"] {
+    background: #347568;
+    border-color: #347568;
+    color: #ffffff;
+}
+[data-testid="stButton"] button[kind^="primary"]:hover:not(:disabled),
+[data-testid="stFormSubmitButton"] button[kind^="primary"]:hover:not(:disabled) {
+    background: #285e53;
+    border-color: #285e53;
+    color: #ffffff;
+}
+[data-testid="stButton"] button:disabled,
+[data-testid="stDownloadButton"] button:disabled,
+[data-testid="stFormSubmitButton"] button:disabled {
+    background: #e9efec;
+    border-color: #dce5e0;
+    color: #64766e;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+[data-testid="stButton"] button:focus-visible,
+[data-testid="stDownloadButton"] button:focus-visible,
+[data-testid="stFormSubmitButton"] button:focus-visible {
+    outline: 3px solid #8db5a7;
+    outline-offset: 3px;
+}
+
+/* Navigation remains a keyboard-accessible radio group with clear selection. */
+[data-testid="stRadio"] [role="radiogroup"] {
+    gap: 0.55rem;
+    flex-wrap: wrap;
+}
+[data-testid="stRadio"] [role="radiogroup"] > label {
+    min-height: 42px;
+    margin: 0;
+    padding: 0.55rem 0.95rem;
+    border: 1px solid #dce7e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #48615b;
+    transition: background-color 150ms ease, border-color 150ms ease;
+}
+[data-testid="stRadio"] [role="radiogroup"] > label:hover {
+    background: #f0f6f3;
+    border-color: #a4c4b6;
+}
+[data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) {
+    background: #e0eee7;
+    border-color: #7fa995;
+    color: #285e53;
+}
+[data-testid="stRadio"] [role="radiogroup"] > label:has(input:checked) p {
+    font-weight: 600;
+}
+[data-testid="stRadio"] [role="radiogroup"] > label:has(input:focus-visible) {
+    outline: 3px solid #8db5a7;
+    outline-offset: 2px;
+}
+
+[data-testid="stMetric"] {
+    background: #edf5f1;
+    border: 1px solid #dce9e1;
+    padding: 18px 22px;
+    border-radius: 14px;
+}
+[data-testid="stMetricLabel"] { color: #526b62; }
+[data-testid="stMetricValue"] { color: #2e6055; }
+[data-testid="stVerticalBlockBorderWrapper"] { border-radius: 14px; }
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stNumberInput"] [data-baseweb="input"],
+[data-testid="stSelectbox"] [data-baseweb="select"] > div,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div {
+    border-radius: 10px;
+    border-color: #d5e3dc;
+    background: #ffffff;
+}
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #dce7e1;
+}
+hr { border-color: #dce7e1; }
+@media (prefers-reduced-motion: reduce) {
+    [data-testid="stButton"] button,
+    [data-testid="stDownloadButton"] button,
+    [data-testid="stFormSubmitButton"] button,
+    [data-testid="stRadio"] label { transition: none; }
+}
+
+/* The sign-in illustration is local and does not load external assets. */
+.login-eyebrow {
+    color: #347568;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-bottom: 1.2rem;
+}
+.login-headline {font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin: 0;}
+.login-description {color: #425b53; max-width: 32rem; line-height: 1.7;}
+.login-features {display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.4rem;}
+.login-features span {
+    padding: 0.45rem 0.85rem;
+    border: 1px solid #d5e5dc;
+    border-radius: 9px;
+    color: #43675c;
+    font-size: 0.82rem;
+    background: #edf5f1;
+}
+[data-testid="stForm"] {border: 0; padding: 0;}
+
+/* Keep the login heading below the fixed Streamlit toolbar. */
+.block-container:has(.login-eyebrow) {padding-top: 5rem;}
+
+/* Workspace palettes share a muted saturation and dark, legible text. */
+.module-theme {display: none;}
+/* In-flow decorative borders never cover controls or consume pointer input. */
+.block-container:has(.supermarket-border) {padding-top: 4.2rem;}
+.supermarket-border {
+    width: 100%;
+    height: 76px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #f2f6f3, #f8faf9 48%, #f2f6f3);
+    pointer-events: none;
+    user-select: none;
+}
+.supermarket-border svg {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 680px;
+    height: 100%;
+    fill: none;
+    color: #759087;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.46;
+}
+.supermarket-border .market-wash {fill: #e0eae3; stroke: none;}
+.supermarket-border .market-product {fill: #f2f6ef;}
+.supermarket-border .market-floor {stroke: #b9cdc3; stroke-width: 0.7;}
+.supermarket-border--top {margin-bottom: 0.35rem;}
+.supermarket-border--bottom {height: 64px; margin-top: 0.6rem;}
+@media (max-width: 640px) {
+    .supermarket-border {height: 56px;}
+    .supermarket-border--bottom {height: 48px;}
+}
+/* Quiet supermarket accents stay inside the heading, clear of data and controls. */
+.workspace-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0.7rem 1.4rem;
+    margin-bottom: 0.4rem;
+    border: 1px solid var(--module-fill);
+    border-radius: 14px;
+    background: linear-gradient(110deg, #ffffff 15%, var(--module-soft));
+}
+.workspace-heading-copy {min-width: 0;}
+.workspace-heading h2 {margin: 0; padding: 0; font-size: 1.65rem; line-height: 1.3;}
+.workspace-heading p {margin: 0.45rem 0 0; color: #52665f; font-size: 0.875rem; line-height: 1.6;}
+.market-illustration {
+    flex: 0 0 144px;
+    width: 144px;
+    height: 90px;
+    color: var(--module-text);
+    opacity: 0.58;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+.market-illustration .market-wash {fill: var(--module-fill); stroke: none;}
+.market-illustration .market-product {fill: var(--module-soft);}
+@media (max-width: 640px) {
+    .workspace-heading {gap: 0.6rem; padding: 0.85rem 1rem;}
+    .workspace-heading h2 {font-size: 1.4rem;}
+    .market-illustration {flex-basis: 88px; width: 88px; height: 64px;}
+}
+@media (max-width: 380px) {
+    .market-illustration {display: none;}
+}
+.stApp:has([data-module="inventory"]),
+.st-key-page [role="radiogroup"] > label:nth-of-type(1) {
+    --module-soft: #edf5ef;
+    --module-fill: #dcece1;
+    --module-hover: #cce0d3;
+    --module-border: #9ab9a5;
+    --module-text: #2e5944;
+}
+.stApp:has([data-module="purchasing"]),
+.st-key-page [role="radiogroup"] > label:nth-of-type(2) {
+    --module-soft: #edf3f8;
+    --module-fill: #dce9f2;
+    --module-hover: #ccdfec;
+    --module-border: #9bb7ca;
+    --module-text: #34576e;
+}
+.stApp:has([data-module="receiving"]),
+.st-key-page [role="radiogroup"] > label:nth-of-type(3) {
+    --module-soft: #f3eff7;
+    --module-fill: #e8dff0;
+    --module-hover: #dbcee7;
+    --module-border: #b5a3c5;
+    --module-text: #5e4775;
+}
+.stApp:has([data-module="history"]),
+.st-key-page [role="radiogroup"] > label:nth-of-type(4) {
+    --module-soft: #f7f3eb;
+    --module-fill: #efe5d2;
+    --module-hover: #e5d7bc;
+    --module-border: #c4ae85;
+    --module-text: #69532f;
+}
+
+/* Primary and secondary actions follow the current module, not button order. */
+.stApp:has(.module-theme) :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stFormSubmitButton"]) button:not(:disabled) {
+    background: var(--module-soft);
+    border-color: var(--module-border);
+    color: var(--module-text);
+}
+.stApp:has(.module-theme) :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stFormSubmitButton"]) button[kind^="primary"]:not(:disabled) {
+    background: var(--module-fill);
+    color: var(--module-text);
+    border-color: var(--module-border);
+    box-shadow: 0 2px 5px rgba(39, 59, 49, 0.07);
+}
+.stApp:has(.module-theme) :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stFormSubmitButton"]) button:hover:not(:disabled) {
+    background: var(--module-hover);
+    border-color: var(--module-text);
+    color: var(--module-text);
+}
+.stApp:has(.module-theme) :is([data-testid="stButton"], [data-testid="stDownloadButton"], [data-testid="stFormSubmitButton"]) button:focus-visible {
+    outline-color: var(--module-text);
+}
+/* Sign-out is a global action and keeps the neutral mint treatment. */
+.stApp:has(.module-theme) .st-key-sign_out button:not(:disabled) {
+    background: #edf5f1;
+    border-color: #cbded7;
+    color: #2e6055;
+}
+
+/* Each navigation tile previews its own workspace color, even when inactive. */
+.st-key-page [role="radiogroup"] > label {
+    background: var(--module-soft);
+    color: var(--module-text);
+    border-color: var(--module-border);
+}
+.st-key-page [role="radiogroup"] > label:hover,
+.st-key-page [role="radiogroup"] > label:has(input:checked) {
+    background: var(--module-fill);
+    color: var(--module-text);
+    border-color: var(--module-text);
+}
+.st-key-page [role="radiogroup"] > label:has(input:checked) {
+    box-shadow: inset 0 -2px 0 var(--module-text);
+}
+.st-key-page [role="radiogroup"] > label:has(input:focus-visible) {
+    outline-color: var(--module-text);
+}
+
+/* Sub-navigation and summary cards use lighter tints of the active palette. */
+.stApp:has(.module-theme) [data-testid="stRadio"]:not(.st-key-page) [role="radiogroup"] > label:has(input:checked) {
+    background: var(--module-fill);
+    color: var(--module-text);
+    border-color: var(--module-border);
+}
+.stApp:has(.module-theme) [data-testid="stMetric"] {
+    background: var(--module-soft);
+    border-color: var(--module-border);
+}
+.stApp:has(.module-theme) :is([data-testid="stMetricLabel"], [data-testid="stMetricValue"]) {
+    color: var(--module-text);
+}
