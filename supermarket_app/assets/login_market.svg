@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-labelledby="title desc">
+<title id="title">A welcoming neighborhood supermarket</title>
+<desc id="desc">A mint green supermarket with a striped awning, fresh produce, stocked shelves and a shopping cart.</desc>
+<rect x="18" y="15" width="684" height="425" rx="38" fill="#edf5ef"/>
+<circle cx="592" cy="90" r="42" fill="#f6e8b9"/>
+<path d="M47 357Q160 312 284 359T675 348V414H47Z" fill="#dbe9de"/>
+<ellipse cx="356" cy="404" rx="262" ry="13" fill="#b9d1c1" opacity=".5"/>
+<rect x="124" y="140" width="436" height="250" rx="12" fill="#fffdf6" stroke="#cbded0" stroke-width="3"/>
+<rect x="147" y="69" width="390" height="78" rx="15" fill="#347568"/>
+<text x="342" y="116" font-family="Arial,sans-serif" font-size="29" font-weight="700" text-anchor="middle" letter-spacing="5" fill="#fffdf6">FRESH MARKET</text>
+<path d="M128 148H557L579 208H106Z" fill="#d1e3d8"/>
+<path d="M128 148H181L170 208H106ZM235 148H289L285 208H225ZM343 148H397L402 208H342ZM451 148H505L520 208H460Z" fill="#6b9c87"/>
+<path d="M106 208H170V219Q138 244 106 219ZM225 208H285V219Q255 244 225 219ZM342 208H402V219Q372 244 342 219ZM460 208H520V219Q490 244 460 219Z" fill="#6b9c87"/>
+<path d="M170 208H225V219Q197 244 170 219ZM285 208H342V219Q314 244 285 219ZM402 208H460V219Q431 244 402 219ZM520 208H579V219Q550 244 520 219Z" fill="#d1e3d8"/>
+<rect x="151" y="249" width="221" height="115" rx="6" fill="#edf4ed" stroke="#9dbbad" stroke-width="4"/>
+<path d="M152 302H372M263 250V364" stroke="#9dbbad" stroke-width="4"/>
+<g fill="#d8ab71"><rect x="169" y="271" width="21" height="28" rx="3"/><rect x="198" y="265" width="21" height="34" rx="3"/><rect x="227" y="272" width="21" height="27" rx="3"/></g>
+<g fill="#6f9b7e"><rect x="281" y="265" width="19" height="34" rx="5"/><rect x="308" y="265" width="19" height="34" rx="5"/><rect x="335" y="265" width="19" height="34" rx="5"/></g>
+<g fill="#b8cda4"><rect x="171" y="320" width="31" height="28" rx="4"/><rect x="212" y="320" width="31" height="28" rx="4"/></g>
+<g fill="#e8c590"><rect x="281" y="317" width="28" height="32" rx="4"/><rect x="320" y="317" width="28" height="32" rx="4"/></g>
+<rect x="395" y="246" width="135" height="144" rx="5" fill="#dcece6" stroke="#7ca392" stroke-width="4"/>
+<path d="M462 247V389" stroke="#7ca392" stroke-width="4"/>
+<path d="M410 266L444 300M476 266L510 300" stroke="#f7fbf8" stroke-width="7" stroke-linecap="round"/>
+<path d="M452 319V340M474 319V340" stroke="#347568" stroke-width="5" stroke-linecap="round"/>
+<rect x="81" y="350" width="125" height="48" rx="5" fill="#bb9065"/>
+<path d="M85 367H201M85 383H201" stroke="#d6b390" stroke-width="5"/>
+<g fill="#d99c63"><circle cx="103" cy="343" r="14"/><circle cx="132" cy="339" r="15"/><circle cx="159" cy="344" r="13"/></g>
+<g fill="#71946c"><ellipse cx="185" cy="338" rx="17" ry="14"/><path d="M180 329Q162 309 184 318Q200 303 199 322Z"/></g>
+<g stroke="#4e8271" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" fill="none"><path d="M555 319H574L590 374H646L660 333H579M590 374L584 386H649"/><path d="M601 336L607 370M624 336V371M647 336L639 371"/></g>
+<circle cx="595" cy="399" r="9" fill="#4e8271"/><circle cx="642" cy="399" r="9" fill="#4e8271"/>
+<rect x="592" y="308" width="25" height="24" rx="3" fill="#e5bd83" transform="rotate(-8 592 308)"/>
+<path d="M625 331V309Q629 295 640 310V331" fill="#a2bb83"/>
+<path d="M76 293V328M62 309H90" stroke="#a5c5b0" stroke-width="4" stroke-linecap="round"/>
+</svg>
