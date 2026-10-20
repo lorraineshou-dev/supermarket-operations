@@ -1,0 +1,14 @@
+**
+!requirements.txt
+!supermarket_app/
+!supermarket_app/*.py
+!supermarket_app/requirements.txt
+!supermarket_app/run_cloud.sh
+!supermarket_app/styles.css
+!supermarket_app/assets/
+!supermarket_app/assets/login_market.svg
+!supermarket_app/deployment/
+!supermarket_app/deployment/check_database.py
+!.streamlit/
+!.streamlit/config.toml
+supermarket_app/init_dev.py
